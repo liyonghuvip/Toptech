@@ -10,8 +10,14 @@ let logger = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 
+
+// routes
 let routes = require('./routes/index');
 
+// database
+let mongoose = require('mongoose');
+
+// express
 let app = express();
 
 //app.set('views', path.join(__dirname, 'views'));
