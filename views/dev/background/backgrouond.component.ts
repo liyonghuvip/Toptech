@@ -1,29 +1,23 @@
-import {Component} from 'angular2/core';
-import {backgroundService} from "./background.service";
-import {OnInit} from "angular2/src/core/linker/interfaces";
+import {Component} from '@angular/core';
+// import {backgroundService} from "./background.service";
 
 @Component({
-  selector: 'background',
-  template: `
-        <canvas>Your Browser does NOT support canvas!~<br>Download the latest chrome below:<br><a href="https://www.google.com/chrome/">https://www.google.com/chrome/</a></canvas>
-        <div *ngFor="#el of imgPaths;#i = index">{{el.imgPath}} {{ i }}</div>
+    selector: 'background',
+    template: `
+        <div class="background">
+            <canvas>Your Browser does NOT support canvas!~<br>Download the latest chrome below:<br><a href="https://www.google.com/chrome/">https://www.google.com/chrome/</a></canvas>
+        </div>
     `,
-  providers: [backgroundService]
+    providers: []
 })
-export class BackgroundComponent implements OnInit {
-  constructor(private _backgroundService: backgroundService) {
-    console.log(`BackgroundComponent init`);
-  }
+export class BackgroundComponent {
+    constructor() {
+        console.log(`BackgroundComponent init`);
+    }
 
-  public imgPaths;
+    public imgPaths;
 
-  getBackgroundImg() {
-    this._backgroundService.getBackground()
-      .then((imgPaths) => this.imgPaths = imgPaths);
-  }
+    getBackgroundImg() {
 
-  ngOnInit(): any {
-    this.getBackgroundImg();
-  }
-
+    }
 }
