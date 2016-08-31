@@ -6,6 +6,13 @@
   left: 0;
 }
 
+@mixin position-a-full-custom-tags() {
+  display: block;
+  @include position-a-full() {
+  }
+;
+}
+
 @mixin position-r-full() {
   position: relative;
   width: 100%;

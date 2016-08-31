@@ -1,0 +1,51 @@
+.background {
+  @include position-a-full-custom-tags() {
+  }
+;
+  z-index: 1000;
+}
+
+#canvas {
+  @include position-a-full-custom-tags() {
+  }
+;
+  z-index: 1;
+}
+
+.polyfills {
+  @include position-a-full-custom-tags() {
+  }
+;
+  z-index: 2000;
+}
+
+.container {
+  @include position-a-full-custom-tags() {
+  }
+;
+  z-index: 4000;
+}
+
+.control-panel {
+  position: absolute;
+  z-index: 5000;
+  &.top-right {
+    top: 0;
+    right: 0;
+  }
+  &.bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  &.bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.notifications {
+  @include position-a-full-custom-tags() {
+  }
+;
+  z-index: 10000;
+}

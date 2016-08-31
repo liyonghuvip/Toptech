@@ -9,4 +9,12 @@ let router = express.Router();
 //     res.end();
 // });
 
+router.get('/img', (req, res, next) => {
+    let num = Math.floor(Math.random() * 25 + 1);
+    res.status(200).json({
+        imgPath: `${num}.jpg`
+    });
+    res.end();
+});
+
 module.exports = router;

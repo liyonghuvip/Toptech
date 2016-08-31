@@ -3,11 +3,13 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'login',
-    template: ``,
+    template: `
+        
+    `,
 })
 
 
-export class loginComponent {
+export class LoginComponent {
     constructor() {
     };
 

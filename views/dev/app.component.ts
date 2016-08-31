@@ -1,20 +1,24 @@
 import {Component} from '@angular/core';
-import {BackgroundComponent} from "./background/backgrouond.component";
+import {BackgroundComponent} from "./background/background.component";
 import {weatherComponent} from "./weather/weather.component";
+import {BackgroundService} from "./background/background.service";
 
 @Component({
   selector: 'Top-tech',
     template: `
-        <background></background>
-        <router-outlet></router-outlet>
-        <polifills></polifills>
-        <control-panel>
-            <weather></weather>
-        </control-panel>
-        <notifications></notifications>
+        <background class="background"></background>
+        <polyfills class="polyfills"></polyfills>
+        <container class="container">
+            <router-outlet></router-outlet>
+            <control-panel class="control-panel">
+                <weather></weather>
+            </control-panel>
+        </container>
+            
+        <notifications class="notifications"></notifications>
     `,
     directives: [BackgroundComponent, weatherComponent],
-    providers: [BackgroundComponent, weatherComponent]
+    providers: [BackgroundComponent, weatherComponent, BackgroundService]
 })
 export class AppComponent {
 
