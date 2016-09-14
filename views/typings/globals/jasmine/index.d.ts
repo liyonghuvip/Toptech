@@ -40,26 +40,16 @@ declare namespace jasmine {
     var clock: () => Clock;
 
     function any(aclass: any): Any;
-
     function anything(): Any;
-
     function arrayContaining(sample: any[]): ArrayContaining;
-
     function objectContaining(sample: any): ObjectContaining;
-
     function createSpy(name: string, originalFn?: Function): Spy;
-
     function createSpyObj(baseName: string, methodNames: any[]): any;
     function createSpyObj<T>(baseName: string, methodNames: any[]): T;
-
     function pp(value: any): string;
-
     function getEnv(): Env;
-
     function addCustomEqualityTester(equalityTester: CustomEqualityTester): void;
-
     function addMatchers(matchers: CustomMatcherFactories): void;
-
     function stringMatching(str: string): Any;
     function stringMatching(str: RegExp): Any;
 

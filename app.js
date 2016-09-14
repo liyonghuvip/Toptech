@@ -24,7 +24,7 @@ let app = express();
 
 
 // uncomment this when favicon.ico has been settled.
-app.use(favicon(path.join(__dirname, 'views/src/img/favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'views/src/img/favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
