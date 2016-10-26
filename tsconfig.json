@@ -8,9 +8,17 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "./app"
+    "outDir": "./views/app"
   },
+  "filesGlob": [
+    "./dev/**/*.ts",
+    "!./node_modules/**/*.ts"
+  ],
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules",
+    "typings"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

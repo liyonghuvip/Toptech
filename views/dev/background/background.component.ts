@@ -26,24 +26,24 @@ export class BackgroundComponent implements OnInit {
 
     getBackgroundImg() {
 
-        this._backgroundService.getImageUrl()
-            .subscribe(
-                data => {
-                    this._imgPath = data.imgPath;
-
-                    let img = new Image();
-                    img.src = `src/img/${this._imgPath}`;
-
-
-                    img.onload = () => {
-                        console.log('load img done')
-                        this._ctx.drawImage(img, 0, 0, this._canvas.width, this._canvas.height);
-                    }
-                },
-                err => {
-                    console.log(err)
-                }
-            )
+        this._backgroundService.getImageUrl();
+        // .subscribe(
+        //     data => {
+        //         this._imgPath = data.imgPath;
+        //
+        //         let img = new Image();
+        //         img.src = `src/img/${this._imgPath}`;
+        //
+        //
+        //         img.onload = () => {
+        //             console.log('load img done')
+        //             this._ctx.drawImage(img, 0, 0, this._canvas.width, this._canvas.height);
+        //         }
+        //     },
+        //     err => {
+        //         console.log(err)
+        //     }
+        // )
 
     }
 

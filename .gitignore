@@ -38,3 +38,7 @@ jspm_packages
 
 # Webstorm
 .idea
+
+# Build
+/views/app
+/views/src

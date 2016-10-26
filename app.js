@@ -47,7 +47,7 @@ app.use((rea, res, next) => {
 if (app.get('env') === 'development') {
     app.use((err, req, res, next) => {
         res.status(err.status || 500);
-        res.send(err.message);
+        //res.send(err.message);
         res.send(err)
     })
 }

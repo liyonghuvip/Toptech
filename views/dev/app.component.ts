@@ -17,7 +17,7 @@ import {BackgroundService} from "./background/background.service";
             
         <notifications class="notifications"></notifications>
     `,
-    directives: [BackgroundComponent, weatherComponent],
+    //declarations: [BackgroundComponent, weatherComponent],
     providers: [BackgroundComponent, weatherComponent, BackgroundService]
 })
 export class AppComponent {
